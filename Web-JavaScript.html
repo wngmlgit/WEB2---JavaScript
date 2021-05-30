@@ -6,17 +6,18 @@
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <input id="night_day" type="button" value="night" onclick="
-        if (document.querySelector('#night_day').value === 'night'){
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            document.querySelector('#night_day').value = 'day';
-        } else {
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            document.querySelector('#night_day').value = 'night';
-        }
-    ">
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+    }
+">
     <ol>
         <li><a href="1.html">HTML</a></li>
         <li><a href="2.html">CSS</a></li>
@@ -33,5 +34,6 @@
     JavaScript engines were originally used only in web browsers, but they are now core components of other software systems, most notably servers and a variety of applications. 
     Although there are similarities between JavaScript and Java, including language name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
     </p>
+   
 </body>
 </html>
